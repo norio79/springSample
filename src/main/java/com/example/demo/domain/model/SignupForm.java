@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class SignupForm {
 	private String userId;//ユーザーID
-	private String passward;//パスワード
+	private String password;//パスワード
 	private String userName;//ユーザー名
 	
 	@DateTimeFormat(pattern = "yyyy/MM/dd")
