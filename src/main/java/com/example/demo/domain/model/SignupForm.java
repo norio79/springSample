@@ -25,7 +25,7 @@ public class SignupForm {
 	@Length(min = 4, max = 100)
 	@Pattern(regexp = "^[a-zA-Z0-9]+$")
 	private String password;//パスワード
-	
+
 	//必須入力
 	@NotBlank
 	private String userName;//ユーザー名
