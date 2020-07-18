@@ -39,12 +39,13 @@ public class SignupController {
 		return "login/signup";
 	}
 	//ユーザー登録画面のPOST用のコントローラー.
+	//ポイント２：データバインド結果の受け取り
 	@PostMapping("/signup")
 	public String postSignUp(@ModelAttribute SignupForm form, BindingResult bindingResult, Model model) {
-		
+		//ポイント３：データバインドの失敗の場合
 		//入力チェックに引っ掛かった場合、ユーザー登録画面に戻る
 		if(bindingResult.hasErrors()) {
-			//GETリクエスト用のメソッドを呼び出して、ユーザー登録画面にもどります
+			//GETリクエスト用のメソッドを呼び出して、ユーザー登録画面に戻ります
 			return getSignUp(form, model);
 		}
 		
